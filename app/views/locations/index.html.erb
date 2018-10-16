@@ -1,0 +1,9 @@
+<h1> Locations </h1>
+
+<% @locations.each do |location| %>
+	<h3><%= location.name %></h3>
+	<% location.flats.each do |flat| %>
+		<p><%= flat.flat_type %></p>
+	<% end %>
+<% end %>
+
