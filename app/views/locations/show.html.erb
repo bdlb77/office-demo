@@ -1,0 +1,6 @@
+<div class="container">
+	<h1><%= @location.name %></h1>
+	<% @location.flats.each do |flat| %>
+		<h3><%= flat.flat_type %></h3>
+	<% end %>
+</div>
