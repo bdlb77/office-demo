@@ -1,8 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-
-<p><%= link_to "Tenants", tenants_path %></p> 
-<p><%= link_to "Locations", locations_path %></p>
-
-
+<div class="container">
+	<div class=" card-buttons-container">
+		<%= link_to tenants_path do  %>
+			<div class="home-card col-md-6">
+				<div class="home-icon home-tenant"></div>
+				<div class="home-card-name">Tenants</div>
+			</div>
+		<%end %>
+		<%= link_to locations_path do  %>
+			<div class="home-card col-md-6">
+				<div class="home-icon home-location"></div>
+				<div class="home-card-name">Location</div>
+			</div>
+		<%end%>
+	</div>
+</div>

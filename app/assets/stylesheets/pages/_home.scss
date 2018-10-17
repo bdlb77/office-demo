@@ -1,1 +1,47 @@
 // Specific CSS for your home-page
+.card-buttons-container{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.home-card{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	box-shadow: 1px 1px 2px darkgray;
+	margin: 70px auto;
+	border-radius: 5px;
+	padding: 25px 0 0 0;
+	&:hover{
+  	opacity: 0.7;
+  	background-color: #eee;
+  	transition: 0.4s ease;
+  	text-decoration: none !important;
+	}
+}
+.home-icon{
+	height: 60%;
+	width: 100%;
+  background-repeat:no-repeat;
+  background-position: top center;
+  background-size: contain;  
+}
+.home-location{
+	background-image: url('001-map-location.png');
+
+}
+.home-tenant{
+	background-image: url('002-phone-book.png');
+
+}
+.home-card-name{
+	position: absolute;
+	bottom: 10px;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	margin: 15px auto;
+	color: $first;
+	font-size: 3rem;
+}
+
