@@ -1,6 +1,6 @@
 <div class="container">
 	<h1><%= @location.name %></h1>
 	<% @location.flats.each do |flat| %>
-		<h3><%= flat.flat_type %></h3>
+		<h3><%=link_to flat.flat_type, location_flat_path(flat) %></h3>
 	<% end %>
 </div>
