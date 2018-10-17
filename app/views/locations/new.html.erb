@@ -1,0 +1,9 @@
+<div class="container" style="width: 400px">
+	<%= simple_form_for @location do |f| %>
+	  <% @types = %w(Studio 2-Bedroom 1-Bedroom 3-Bedroom) %>
+	  <%=f.input :city %>
+	  <%=f.input :name %>
+	  <%=f.input :open, as: :boolean%>
+	  <%= f.button :submit %>
+	<%  end %> 
+</div>

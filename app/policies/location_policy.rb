@@ -9,7 +9,7 @@ class LocationPolicy < ApplicationPolicy
 		true
 	end
   
-	def new?
+	def create?
 		true
 	end
 end

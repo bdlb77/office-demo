@@ -3,9 +3,14 @@ class TenantPolicy < ApplicationPolicy
     def resolve
 	    scope.all
     end
+  end
 
     def show?
-    	true# for all user who would be admin.
+    	true # for all user who would be admin.
     end
-  end
+
+    def create?
+    	true 
+    end
+    
 end
