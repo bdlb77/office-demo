@@ -1,11 +1,18 @@
 class FlatPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
-    end
+       if user.admin?
+        scope.all
+      else
+        raise Pundit::NotAuthorizedError, 'not allowed to view this action'
+      end
+ 	 	end 
   end 
 
+  def index?
+  	user.admin?
+  end
   def create?
-    true
+    user.admin?
   end
 end

@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 		before_action :set_location, only: [:show]
-	def index
+	def index	
 		@locations = policy_scope(Location)
 	end
 
