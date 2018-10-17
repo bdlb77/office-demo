@@ -3,3 +3,5 @@
 <% @tenants.each do |tenant| %>
 	<h3><%= link_to "#{tenant.first_name} #{tenant.last_name}", tenant_path(tenant) %></h3>
 <% end %>
+
+<p><%= link_to 'home', '/' %></p>
