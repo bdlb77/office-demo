@@ -15,7 +15,8 @@ Location.delete_all
 User.delete_all
 
 
-user = User.create!(email: 'bdlb@utexas.edu', password:'123456')
+user = User.create!(email: 'bdlb@utexas.edu', password:'123456', admin: true)
+user2 = User.create!(email:'steve@hotmail.com', password: '123456', admin: false)
 
 location = Location.create!(name: 'La Défense', city: 'Paris', open: true)
 
