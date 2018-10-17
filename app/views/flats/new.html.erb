@@ -1,0 +1,13 @@
+<div class="container" style="width: 400px">
+	<%= simple_form_for [@location, @flat] do |f| %>
+	  <% @types = %w(Studio 2-Bedroom 1-Bedroom 3-Bedroom) %>
+	  <%=f.input :flat_type, collection: @types  %>
+	  <%=f.input :address  %>
+	  <%=f.input :occupancy, as: :integer %>
+	  <%=f.input :bedrooms, as: :integer%>
+	  <%=f.input :bathrooms, as: :integer %>
+	  <%=f.input :floor_number, as: :integer%>
+	  <%=f.input :availability, as: :boolean%>
+	  <%= f.button :submit %>
+	<%  end %> 
+</div>

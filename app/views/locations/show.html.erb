@@ -1,8 +1,9 @@
 <div class="container">
 	<h1><%= @location.name %></h1>
 	<% @location.flats.each do |flat| %>
-		<h3><%=link_to flat.flat_type, location_flat_path(flat) %></h3>
+		<h3><%=link_to flat.flat_type, location_flat_path(@location, flat) %></h3>
 	<% end %>
 </div>
 
 <p><%= link_to 'home', '/' %></p>
+<p><%= link_to 'new flat', new_location_flat_path(@location) %></p

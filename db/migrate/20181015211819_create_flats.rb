@@ -7,7 +7,7 @@ class CreateFlats < ActiveRecord::Migration[5.2]
       t.integer :occupancy
       t.integer :bedrooms
       t.integer :bathrooms
-      t.boolean :availability
+      t.boolean :availability, default: true
       t.references :location, foreign_key: true
 
       t.timestamps
