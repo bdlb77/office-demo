@@ -2,22 +2,26 @@
 
 <div class="container tenant-index-wrapper">
 	<div class="buttons-index">
-		<%= button_to	"Home", "/", method: :get, class: "btn btn-success btn-tenant" %>
-		<%= button_to	"Add a Tenant", new_tenant_path, method: :get, class: "btn btn-success btn-tenant" %>	
+		<%= button_to	"Home", "/", method: :get, class: "mdl-button mdl-js-button mdl-button--raised md-btn-primary" %>
+		<%= button_to	"Add a Tenant", new_tenant_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised md-btn-primary" %>	
 	</div>
-	<% @tenants.each do |tenant|%>
-	<div class="tenant-wrapper">
-		<%= link_to "#", class: "tenant-name tenant-index" do  %>
-			<%= "#{tenant.last_name}, #{tenant.first_name}" %>
-		<% end %>
-		<div class="tenant-email tenant-index">
-			<%= tenant.email %>
-		</div>
-		<div class="tenant-phone tenant-index">
-			<%= tenant.phone_number %>
-		</div>
-	</div>
-	<% end %>
-</div>
 
+	<ul class="mdl-list tenant-list">
+	<% @tenants.each do |tenant|%>
+		<li class="mdl-list__item mdl-list__item--three-line tenant-wrapper">
+		  <span class="mdl-list__item-primary-content">
+		    <i class="material-icons mdl-list__item-avatar">person</i>
+		    <span><%="#{tenant.last_name}, #{tenant.first_name}" %></span>
+		    <div class="mdl-list__item-text-body tenant-info">
+		      <div class="tenant-info-cell"><%= tenant.email %></div >
+		      <div class="tenant-info-cell"><%= tenant.phone_number %></div>
+		    </div>
+		  </span>
+		  <span class="mdl-list__item-secondary-content">
+		    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+		  </span>
+		</li>
+	<% end %>
+	</ul>
+			
 
