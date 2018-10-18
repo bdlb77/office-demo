@@ -1,4 +1,5 @@
 class Tenant < ApplicationRecord
+	has_many :flat_contracts
 	has_many :flats, through: :flat_contracts
 	validates :first_name, presence: true
 	validates :last_name, presence: true

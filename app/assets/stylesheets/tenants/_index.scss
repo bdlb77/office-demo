@@ -1,0 +1,37 @@
+.tenant-wrapper{
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 1px 1px 3px $first;
+	padding: 20px 20px;
+	margin: 5px;
+}
+.tenant-index{
+	color: $first;
+	margin: 0 auto;
+	width: 33%;
+}
+.tenant-name{
+	text-decoration: none;
+	color: $first;
+	&:hover{
+		text-decoration: none;
+		color: $second;
+	}
+}
+.tenant-index-wrapper{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 0 auto;
+}
+.tenant-index-header{
+	margin-left: 10%;
+}
+.buttons-index{
+	display: flex;
+	margin: 10px;
+}
+.btn-tenant{
+	margin: 10px;
+}

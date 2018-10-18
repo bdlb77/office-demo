@@ -1,8 +1,23 @@
-<h1>TENANTS INDEX</h1>
+<h1 class="tenant-index-header">Tenants</h1>
 
-<% @tenants.each do |tenant| %>
-	<h3><%= link_to "#{tenant.first_name} #{tenant.last_name}", tenant_path(tenant) %></h3>
-<% end %>
+<div class="container tenant-index-wrapper">
+	<div class="buttons-index">
+		<%= button_to	"Home", "/", method: :get, class: "btn btn-success btn-tenant" %>
+		<%= button_to	"Add a Tenant", new_tenant_path, method: :get, class: "btn btn-success btn-tenant" %>	
+	</div>
+	<% @tenants.each do |tenant|%>
+	<div class="tenant-wrapper">
+		<%= link_to "#", class: "tenant-name tenant-index" do  %>
+			<%= "#{tenant.last_name}, #{tenant.first_name}" %>
+		<% end %>
+		<div class="tenant-email tenant-index">
+			<%= tenant.email %>
+		</div>
+		<div class="tenant-phone tenant-index">
+			<%= tenant.phone_number %>
+		</div>
+	</div>
+	<% end %>
+</div>
 
-<p><%= link_to 'home', '/' %></p>
-<p><%= link_to 'Add a new tenant', new_tenant_path %></p>
+
