@@ -1,5 +1,5 @@
 .tenant-wrapper{
-	box-shadow: 1px 1px 3px lightgray;
+	box-shadow: 1px 1px 3px #F4F4F4;
 	padding: 10px;
 	border-radius: 2px;
 }
@@ -22,6 +22,7 @@
 .tenant-info-cell{
 	margin: 20px;
 	width: 50%;
+  color: $third;
   font-weight: lighter;
 }
 .tenant-index-wrapper{
@@ -31,7 +32,8 @@
 	margin: 0 auto;
 }
 .tenant-index-header{
-	margin-left: 10%;
+	margin-left: 5%;
+	color: $first;
 }
 .buttons-index{
 	display: flex;
