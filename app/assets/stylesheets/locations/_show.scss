@@ -1,0 +1,101 @@
+$pad-loc: 10px;
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 60vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+// .loc-s-wrapper div {
+//   border: 1px solid black;
+// }
+
+
+.fa-user-circle{
+  font-size: 36px;
+}
+.border{
+  height: 80%;
+  border-right: 1px solid $second;
+}
+.photo-contain{
+  background-size: cover !important;
+  background-repeat:   no-repeat 97% 50%;
+  background-position: center center;
+}
+.loc-s-wrapper{
+  width: 100%;
+  display: flex;
+}
+.flat-tenant-s{
+  display: flex;
+  flex-wrap: wrap;
+}
+.loc-width-l {
+  width: 60%;
+  color: $first;
+  background: $light-gray;
+  border-radius: 3px;
+  height: 100vh;
+  overflow: scroll;
+}
+.loc-width-r{
+  width: 40%;
+}
+.loc-s-item > div {
+}
+.loc-s-item{
+  display: flex;
+  box-shadow: 1px 1px 5px lightgray;
+  width: 100%;
+  height: 100px;
+  margin: 10px;
+  background: $base-white;
+  .flat-info-s{
+    width: 100%;
+  }
+  .flat-info-s div {
+    width: 100%;
+    height: 50%;
+  }
+} 
+.loc-s-item div{
+  width: 33%;
+}
+.flat-avail-s div{
+  height: 50%;
+  width: 100%;
+}
+.flat-add-s, .flat-tenant-s, 
+.flat-type-s div, .flat-avail-cell-s {
+  padding: $pad-loc !important;
+}
+.flat-room-s div{
+  padding: 10px 0 0 10px;
+}
+.flat-type-s{
+  display: flex;
+  justify-content: space-around;
+}
+.flat-type-s div {
+  height: 100% !important;
+}

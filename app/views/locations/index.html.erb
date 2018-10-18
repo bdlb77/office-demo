@@ -1,14 +1,25 @@
 
+
 <div class="container">
 	<h1> Locations </h1>
+	<div class="buttons-index">
+		<%= button_to	"Home", "/", method: :get, class: "mdl-button mdl-js-button mdl-button--raised md-btn-primary" %>
+		<%= button_to	"New Location", new_location_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised md-btn-primary" %>	
+	</div>
+
 	<% @locations.each do |location| %>
-		<h3><%= link_to location.name, location_path(location) %></h3>
-		<% location.flats.each do |flat| %>
-			<p><%= flat.flat_type %></p>
-		<% end %>
-	<% end %>	
+		<%= link_to location_path(location) do %>
+		<div class="col-md-4">
+			<div class="card location-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(<%= image_path 'paris.jpg' %>);">
+		  <div class="card-category">Available!</div>
+		  <div class="card-description">
+		    <h2><%= location.name %></h2>
+	    	<h6><%= location.city %></h6>
+		  </div>
+	  	<i class="card-user material-icons mdl-list__item-avatar">person</i>
+		</div>
+	</div>
+	<%end %>
+<% end %>	
 
-
-<p><%= link_to 'home', '/' %></p>
-<p><%= link_to 'Create new Location', new_location_path %></p>
 </div>
