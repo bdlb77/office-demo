@@ -29,7 +29,13 @@ $pad-loc: 10px;
 //   border: 1px solid black;
 // }
 
+#text-decoration a {
+    text-decoration: none !important;
+    color: $first !important;
+      opacity: 0.6 !important;
 
+
+  }
 .fa-user-circle{
   font-size: 36px;
 }
@@ -69,7 +75,11 @@ $pad-loc: 10px;
   width: 100%;
   height: 100px;
   margin: 10px;
-  background: $base-white;
+  background: $base-white ;
+  transition: background 0.5s ease;
+  &:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  }
   .flat-info-s{
     width: 100%;
   }
