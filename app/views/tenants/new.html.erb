@@ -3,7 +3,7 @@
 	  <%=f.input :first_name %>
 	  <%=f.input :last_name %>
 	  <%=f.input :email, as: :email%>
-	  <%=f.input format_phone(:phone)%>
+	  <%=f.input format_phone(:phone), label: "Phone: XXX-XXX-XXXX"%>
 	  <%=f.input :username%>
 	  <%=f.input :birthday, as: :date%>
 	  <%= f.button :submit, class: "mdl-button mdl-js-button mdl-button--raised", id: "md-second" %>
