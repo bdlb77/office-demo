@@ -1,4 +1,5 @@
 class Tenant < ApplicationRecord
+
 	has_many :flat_contracts
 	has_many :flats, through: :flat_contracts
 	validates :first_name, presence: true
@@ -10,4 +11,9 @@ class Tenant < ApplicationRecord
   }
 	validates :birthday, presence: true
 	validates :username, presence: true
+
+		def formated_number
+			formatted_phone_number(phone_number)
+		end
+	# formated_number = formatted_phone_number(phone_number)
 end

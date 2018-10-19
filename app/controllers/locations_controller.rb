@@ -16,7 +16,7 @@ class LocationsController < ApplicationController
 		@location = Location.new(location_params)
 		authorize @location
 		if @location.save
-			flash[:success] = "Your location has been created"
+			flash[:notice] = "Your location has been created"
 			redirect_to location_path(@location)
 		else
 			redirect_to new_location_path(@location)

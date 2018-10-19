@@ -22,7 +22,7 @@
 				<span class="border"></span>
 				<div class="flat-info-s">
 					<div class="flat-type-s">
-						<div><span class='label label-warning'><strong><%= flat.flat_type %></strong></span></div>
+						<div><span class='label label-warning'><%= flat.flat_type %></span></div>
 						<div>Floor: <strong><%= flat.floor_number %></strong></div>
 					</div>
 					<div class="flat-add-s"><%= flat.address %></div>
@@ -34,7 +34,7 @@
 						<div>Bath: <strong><%= flat.bathrooms %></strong></div>
 					</div>
 					<div class="flat-avail-cell-s">Avail: 
-					<% if flat.availability  %>
+					<% if flat.available?  %>
 					<span class="label label-warning">Yes</span>
 						<% else %>
 						<span class="label label-danger">no</span>

@@ -3,6 +3,7 @@ class FlatsController < ApplicationController
 	before_action :set_location, only: [:new, :create]
 	
 	def show
+		@flat.available?
 	end
 
 	def new
@@ -15,7 +16,7 @@ class FlatsController < ApplicationController
 		authorize @flat
 		@flat.location = @location
 		if @flat.save
-			flash[:success] = "Your flat has been set!"
+			flash[:notice] = "Your flat has been set!"
 			redirect_to location_flat_path(@location, @flat)
 		else
 			redirect_to new_location_flat_path(@location)

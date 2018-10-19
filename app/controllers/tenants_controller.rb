@@ -16,9 +16,10 @@ class TenantsController < ApplicationController
 		@tenant = Tenant.new(tenant_params)
 		authorize @tenant
 		if @tenant.save
-			flash[:success] = "Your Tenant has been created"
+			flash[:notice] = "Your Tenant has been created"
 			redirect_to tenants_path
 		else
+			flash[:alert] = "Invalid Inputs"
 			redirect_to new_tenant_path
 		end
 	end

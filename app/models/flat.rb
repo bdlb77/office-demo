@@ -9,4 +9,12 @@ class Flat < ApplicationRecord
   validates :bedrooms, presence: true
   validates :bathrooms, presence: true 
 
+
+  def available?
+  	availability =  tenants.count < occupancy 
+  end
+
+  
+
+
 end

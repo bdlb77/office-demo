@@ -13,7 +13,7 @@
 		    <span class="tenant-name"><%="#{tenant.last_name}, #{tenant.first_name}" %></span>
 		    <div class="mdl-list__item-text-body tenant-info">
 		      <div class="tenant-info-cell"><%= tenant.email %></div >
-		      <div class="tenant-info-cell"><%= tenant.phone_number %></div>
+		      <div class="tenant-info-cell"><%= format_phone(tenant.phone) %></div>
 		    </div>
 		  </span>
 		  <span class="mdl-list__item-secondary-content">

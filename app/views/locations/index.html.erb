@@ -7,18 +7,17 @@
 	</div>
 
 	<% @locations.each do |location| %>
-		<%= link_to location_path(location) do %>
-		<div class="col-md-4">
+	<div class="col-md-4">
 			<div class="card location-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(<%= image_path 'paris.jpg' %>);">
-		  <div class="card-category">Available!</div>
-		  <div class="card-description">
-		    <h2><%= location.name %></h2>
-	    	<h6><%= location.city %></h6>
-		  </div>
-	  	<i class="card-user material-icons mdl-list__item-avatar">person</i>
-		</div>
+		  	<div class="card-category">Available!</div>
+		  	<div class="card-description">
+		   		<h2><%= location.name %></h2>
+	    		<h6><%= location.city %></h6>
+		  	</div>
+	  		<i class="card-user material-icons mdl-list__item-avatar">person</i>
+	  		<%= link_to "", location_path(location), class: "card-link" %>
+			</div>
 	</div>
-	<%end %>
-<% end %>	
+	<% end %>	
 
 </div>
