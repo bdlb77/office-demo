@@ -99,3 +99,19 @@ $pad-loc: 10px;
 .flat-type-s div {
   height: 100% !important;
 }
+
+.buttons-banner{
+  display: flex;
+}
+#md-second{
+  background: $third !important;
+  color: $base-black;
+  font-weight: lighter;
+  margin: 10px;
+  &:hover{
+  background: $third;
+  opacity: 0.7;
+  transition: 0.3s ease;
+
+  }
+}
