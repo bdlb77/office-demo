@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_19_135126) do
+ActiveRecord::Schema.define(version: 2018_10_20_190959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "event_bookings", force: :cascade do |t|
+    t.boolean "approved", default: false
+    t.boolean "expired", default: false
+    t.bigint "event_id"
+    t.bigint "tenant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_bookings_on_event_id"
+    t.index ["tenant_id"], name: "index_event_bookings_on_tenant_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.datetime "date"
+    t.integer "attendees"
+    t.integer "capacity"
+    t.string "address"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
 
   create_table "flat_contracts", force: :cascade do |t|
     t.bigint "tenant_id"
@@ -75,6 +98,9 @@ ActiveRecord::Schema.define(version: 2018_10_19_135126) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "event_bookings", "events"
+  add_foreign_key "event_bookings", "tenants"
+  add_foreign_key "events", "users"
   add_foreign_key "flat_contracts", "flats"
   add_foreign_key "flat_contracts", "tenants"
   add_foreign_key "flat_contracts", "users"
