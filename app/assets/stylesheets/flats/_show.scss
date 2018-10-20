@@ -1,0 +1,42 @@
+$box-shadow: 1px 1px 5px lightgray;
+.fa-calendar-check{
+	color: $third;
+	font-size: 24px;
+}
+
+.fa-calendar-times{
+	color: $red;
+	font-size: 24px;
+
+}
+.f-s-c-l{
+	border: 1px solid black;
+	margin: 15px;
+}
+
+.f-s-c-l > div {
+	padding: 15px;
+	font-size: 16px;
+	color: $first;
+	width: 100%;
+}
+
+.flat-info-wrapper{
+	margin: 20px 0;
+	padding: 10px 20px;
+	box-shadow: $box-shadow;
+}
+
+.flat-row-tenant-wrapper{
+	box-shadow: $box-shadow;
+}
+.flat-tenant-wrapper{
+	margin: 20px 0;
+
+}
+@media only screen and ( max-width: $screen-sm-min) {
+	.skill-card{
+		margin: 10px auto;
+		width: 100%;
+	}
+}

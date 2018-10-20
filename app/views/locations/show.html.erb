@@ -12,7 +12,7 @@
 	<div class="loc-inside-wrapper loc-width-l">
 		<% @location.flats.each do |flat| %>
 		<div class="col-sm-12" id="text-decoration">
-		<%= link_to location_flat_path(flat) do %>
+			<%= link_to location_flat_path(@location, flat) do %>
 		<div class="loc-s-item">
 				<div class="flat-tenant-s">
 					<i class="fas fa-user-circle"></i>
@@ -42,9 +42,9 @@
 					</div>
 				</div>
 			</div>
+		<% end %>
 		</div>
-		<% end %>
-		<% end %>
+	<% end %>
 	</div>
 	<div class="loc-inside-wrapper loc-width-r">
 		<div class="loc-right-s">
@@ -53,3 +53,4 @@
 		</div>
 	</div>
 </div>
+

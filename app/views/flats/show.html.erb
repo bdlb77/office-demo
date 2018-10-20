@@ -8,48 +8,84 @@
 	<% image = "kitchen.jpg" %>
 <% end %>
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path image %>);">
-  <div class="banner-content">
-    <h1><%= @flat.flat_type %></h1>
-    <p><%= @flat.location.name %> - <%= @flat.location.city %></p>
+	<div class="banner-content">
+		<h1><%= @flat.flat_type %></h1>
+		<p><%= @flat.location.name %> - <%= @flat.location.city %></p>
 		<%= button_to	"Edit Flat", edit_location_flat_path(@flat), method: :get, class: "mdl-button mdl-js-button mdl-button--raised", id: "md-second" %>	  	
-  </div>
+	</div>
 </div>
 
 <div class="container flat-s-wrapper">
 	<div class="row">
-		<div class="col-md-4">
-			<div class="flat-s-column f-s-c-l">
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-12 flat-info-wrapper">
+					<div class="row">
+						<div class="col-xs-4">
+							<%  if @flat.available? %>
+								Vacancy <span><i class="fas fa-calendar-check"></i></span>
+							<% else %>
+								Full <span><i class="fas fa-calendar-times"></i></span>
+							<% end %>
+						</div>
+						<div class="col-xs-4">
+							<%= @flat.bedrooms <= 1 ? "#{@flat.bedrooms} room" : "#{@flat.bedrooms} rooms"  %> 
+						</div>
+						<div class="col-xs-4">
+							<%= @flat.bathrooms <= 1 ? "#{@flat.bathrooms} bath" : "#{@flat.bathrooms} baths" %>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							# <%= @flat.flat_number %>
+						</div>
+						<div class="col-xs-4 ">
+							<%= @flat.floor_number %>
+						</div>
+						<div class="col-xs-12">
+							<%= @flat.address %>
+						</div>
+					</div>
+				</div>
 			</div>
+			<div class="row flat-row-tenant-wrapper">
+				<div class="col-md-12 flat-tenant-wrapper">
+					<div class="row">
+						
+					<% @flat.tenants.each do |tenant| %>
+					<div class="col-xs-12 col-sm-6">
+						<div class="skill-card">
+							<header class="skill-card__header">
+								<img class="skill-card__icon" src=<%= image_path "steve.jpg" %>/>
+							</header>
+							<section class="skill-card__body">
+								<h3 class="skill-card__title"><%= "#{tenant.first_name} #{tenant.last_name}" %></h2>
+								<span class="skill-card__duration">
+									<div><%= "Start: #{tenant.flat_contracts.first.start_date}" %></div>
+									<div><%= "End: #{tenant.flat_contracts.first.end_date}"%></div>
+								</span>
+								<ul class="skill-card__knowledge">
+									<li><i class="fas fa-user-tag fa"></i>   <%= tenant.username %></li>
+									<li><i class="fas fa-envelope fa"></i>   <%= tenant.email %></li>
+									<li><i class="fas fa-mobile fa"></i>   <%= tenant.phone %></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+					<% end %>
+					</div>
+
+				</div>
+			</div>
+			<!-- <div class="row">
+				<div class="col-md-12 flat-event-wrapper">
+					<div class="flat-s-events">Events</div>	
+				</div>
+			</div> -->
 		</div>
 		<div class="col-md-4">
-			<div class="flat-s-column f-s-c-r"></div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="flat-s-tenants">Tenants</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="flat-s-events">Events</div>
-					</div>
-				</div>
-		</div>
-		<div class="col-md-4">
-			<div class="flat-s-column f-s-c-m">Messages</div>	
+			<!-- <div class="flat-s-column f-s-c-m">Messages</div>	 -->
 		</div>
 	</div>
 </div>
 
-
-<div class="flat-s-name"></div>
-<div class="flat-s-avail"></div>
-<div class="flat-s-bed"></div>
-<div class="flat-s-bath"></div>
-<div class="flat-s-add"></div>
-
-
-<style>
-	.flat-s-column{
-		width: 100%;
-	}
-</style>
