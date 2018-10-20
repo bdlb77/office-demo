@@ -4,6 +4,14 @@ $box-shadow: 1px 1px 5px lightgray;
 	font-size: 24px;
 }
 
+.envol{
+	color: $first !important;
+		text-decoration: none !important;
+	&:hover{
+		color: $third !important;
+		text-decoration: none !important;
+	}
+}
 .fa-calendar-times{
 	color: $red;
 	font-size: 24px;
@@ -22,6 +30,7 @@ $box-shadow: 1px 1px 5px lightgray;
 }
 
 .flat-info-wrapper{
+	color: $first;
 	margin: 20px 0;
 	padding: 10px 20px;
 	box-shadow: $box-shadow;
