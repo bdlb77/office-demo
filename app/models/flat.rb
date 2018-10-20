@@ -8,6 +8,7 @@ class Flat < ApplicationRecord
   validates :occupancy, presence: true
   validates :bedrooms, presence: true
   validates :bathrooms, presence: true 
+  validates :flat_number, presence: true 
 
 
   def available?
