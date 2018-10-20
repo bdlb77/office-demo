@@ -1,10 +1,15 @@
 .tenant-wrapper{
-	box-shadow: 1px 1px 3px #F4F4F4;
+	margin-bottom: 5px;
+	box-shadow: 1px 1px 5px lightgray;
 	padding: 10px;
 	border-radius: 2px;
+	div {
+		color: $first;
+	}
 }
 
 .tenant-list{
+	margin-bottom: 20px;
 	width: 700px;
 }
 .tenant-name{
@@ -15,22 +20,15 @@
 		color: $second;
 	}
 }
-.tenant-info{
-	display: flex !important;
-	justify-content: flex-start;
+
+.t-phone, .t-flat-num, .t-l-name, .t-email, .t-av, .t-name{
+	padding: 5px;
+} 
+.t-av{
+	padding-left: 15px;
 }
-.tenant-info-cell{
-	margin: 20px;
-	width: 50%;
-  color: $third;
-  font-weight: lighter;
-}
-.tenant-index-wrapper{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin: 0 auto;
-}
+
+
 .tenant-index-header{
 	margin-left: 5%;
 	color: $first;

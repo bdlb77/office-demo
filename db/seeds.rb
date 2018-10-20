@@ -25,22 +25,37 @@ location2 = Location.create!(name: "L'Auberge", city: 'Paris', open: true)
 
 	flat_type = ['2-Bedroom', 'Studio', '3-Bedroom'].shuffle.first
 
-	Flat.create!(flat_type: "2-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 3, occupancy: 2, bedrooms: 2, bathrooms: 1, location: location, flat_number: "301" )
-	Flat.create!(flat_type: "2-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 1, occupancy: 4, bedrooms: 2, bathrooms: 1, location: location, flat_number: "101")
-	Flat.create!(flat_type: "Studio", address: Faker::Address.full_address, availability: true, floor_number: 1, occupancy: 1, bedrooms: 1, bathrooms: 1, location: location, flat_number: "110" )
-	Flat.create!(flat_type: "Studio", address: Faker::Address.full_address, availability: true, floor_number: 1, occupancy: 1, bedrooms: 1, bathrooms: 2, location: location2, flat_number: "102" )
-	Flat.create!(flat_type: "3-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 2, occupancy: 3, bedrooms: 3, bathrooms: 2, location: location2, flat_number: "203" )
-	Flat.create!(flat_type: "3-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 2, occupancy: 5, bedrooms: 3, bathrooms: 2, location: location2, flat_number:"215" )
-	Flat.create!(flat_type: "3-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 2, occupancy: 4, bedrooms: 3, bathrooms: 2, location: location2, flat_number:"220" )
+	flat1 = Flat.create!(flat_type: "2-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 3, occupancy: 2, bedrooms: 2, bathrooms: 1, location: location, flat_number: "301" )
+	flat2 = Flat.create!(flat_type: "2-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 1, occupancy: 4, bedrooms: 2, bathrooms: 1, location: location, flat_number: "101")
+	flat3 = Flat.create!(flat_type: "Studio", address: Faker::Address.full_address, availability: true, floor_number: 1, occupancy: 1, bedrooms: 1, bathrooms: 1, location: location, flat_number: "110" )
+	flat4 = Flat.create!(flat_type: "Studio", address: Faker::Address.full_address, availability: true, floor_number: 1, occupancy: 1, bedrooms: 1, bathrooms: 2, location: location2, flat_number: "102" )
+	flat5 = Flat.create!(flat_type: "3-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 2, occupancy: 3, bedrooms: 3, bathrooms: 2, location: location2, flat_number: "203" )
+	flat6 = Flat.create!(flat_type: "3-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 2, occupancy: 5, bedrooms: 3, bathrooms: 2, location: location2, flat_number:"215" )
+	flat7 = Flat.create!(flat_type: "3-Bedroom", address: Faker::Address.full_address, availability: true, floor_number: 2, occupancy: 4, bedrooms: 3, bathrooms: 2, location: location2, flat_number:"220" )
 
 puts "flats created"
 
-10.times do 
-	Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
-end
+	tenant1 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant2 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant3 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant4 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant5 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant6 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant7 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant8 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant9 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant10 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
+	tenant11 = Tenant.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email:'example@gmail.com', phone: Faker::PhoneNumber.cell_phone, username: Faker::Name.initials, birthday: '06.08.1993')
 puts "tenants created"
-10.times do
-	number = rand(1..7)
-	FlatContract.create!(flat: Flat.find(number), tenant: Tenant.find(number), start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
-end
+	flat_c_1 = FlatContract.create!(flat: flat1, tenant: tenant1, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_2 = FlatContract.create!(flat: flat1,  tenant: tenant2,start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_3 = FlatContract.create!(flat: flat2,  tenant: tenant3, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_4 = FlatContract.create!(flat: flat3,  tenant: tenant4, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_5 = FlatContract.create!(flat: flat4,  tenant: tenant5, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_6 = FlatContract.create!(flat: flat5,  tenant: tenant6, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_7 = FlatContract.create!(flat: flat5,  tenant: tenant7, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_8 = FlatContract.create!(flat: flat5,  tenant: tenant8, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_9 = FlatContract.create!(flat: flat6,  tenant: tenant9, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_10 = FlatContract.create!(flat: flat7,  tenant: tenant10, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
+	flat_c_11 = FlatContract.create!(flat: flat7,  tenant: tenant11, start_date: Faker::Date.between(4.days.ago, 3.days.ago), end_date:Faker::Date.between(2.days.ago, Date.today), user: user )
 puts "flat contracts created"

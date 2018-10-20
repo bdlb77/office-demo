@@ -1,26 +1,37 @@
 <h1 class="tenant-index-header">Tenants</h1>
 
 <div class="container tenant-index-wrapper">
-	<div class="buttons-index">
-		<%= button_to	"Add Tenant", new_tenant_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised md-btn-primary" %>	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="buttons-index">
+				<%= button_to	"Add Tenant", new_tenant_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised md-btn-primary" %>	
+			</div>	
+		</div>
 	</div>
+	<div class="row tenant-list">
+		<% @tenants.each do |tenant| %>
+		<div class="col-xs-12 tenant-wrapper">
+			<div class="row">
+				<div class="col-xs-1 t-av">
+					<img  src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered mdl-list_item-avatar"/>
+				</div>
+				<div class="col-xs-3 t-name">
+					<div class="col-xs-12 tenant-name"><%= tenant.last_name %>, <%= tenant.first_name %></div>
+				</div>
+				<div class="col-xs-8">
+					<div class="row">
+						<div class="col-xs-6 t-email"><%= tenant.email %></div>
+						<div class="col-xs-4 t-l-name"><%= tenant.flats.first.location.name %></div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 t-phone"><%= tenant.phone%></div>
+						<div class="col-xs-4 t-flat-num"># <%= tenant.flats.first.flat_number%></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
 
-	<ul class="mdl-list tenant-list">
-	<% @tenants.each do |tenant|%>
-		<li class="mdl-list__item mdl-list__item--three-line tenant-wrapper">
-		  <span class="mdl-list__item-primary-content">
-		    <i class="material-icons mdl-list__item-avatar">person</i>
-		    <span class="tenant-name"><%="#{tenant.last_name}, #{tenant.first_name}" %></span>
-		    <div class="mdl-list__item-text-body tenant-info">
-		      <div class="tenant-info-cell"><%= tenant.email %></div >
-		      <div class="tenant-info-cell"><%= format_phone(tenant.phone) %></div>
-		    </div>
-		  </span>
-		  <span class="mdl-list__item-secondary-content">
-		    <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
-		  </span>
-		</li>
-	<% end %>
-	</ul>
 			
-
