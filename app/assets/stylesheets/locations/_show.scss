@@ -55,6 +55,7 @@ $pad-loc: 10px;
 .flat-tenant-s{
   display: flex;
   flex-wrap: wrap;
+  overflow: scroll;
 }
 .loc-width-l {
   width: 60%;
@@ -124,4 +125,14 @@ $pad-loc: 10px;
   transition: 0.3s ease;
 
   }
+}
+
+//  Avatar css
+.avatar-bordered {
+  margin: 0 -15px 0 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
 }
