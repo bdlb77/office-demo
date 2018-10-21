@@ -1,0 +1,11 @@
+<div class="container" style="width: 400px">
+	<%= simple_form_for [@location, @flat] do |f| %>
+	  <% @types = %w(Studio 2-Bedroom 1-Bedroom 3-Bedroom) %>
+	  <%=f.input :name %>
+	  <%=f.input :description, as: :text	 %>
+	  <%=f.input :address, as: :integer %>
+	  <%=f.input :date, as: :datetime %>
+	  <%=f.input :capacity, as: :integer %>
+	  <%= f.button :submit, class: "mdl-button mdl-js-button mdl-button--raised", id: "md-second"%>
+	<%  end %> 
+</div>

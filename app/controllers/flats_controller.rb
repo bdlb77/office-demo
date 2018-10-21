@@ -23,6 +23,8 @@ class FlatsController < ApplicationController
 		end
 	end
 	
+	def destroy
+	end
 	private 
 	
 	def flat_params

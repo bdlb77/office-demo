@@ -53,12 +53,13 @@
 		<div class="col-md-4 loc-inside-wrapper">
 			<div class="row">
 				<div class="col-md-12">
-				<div class="loc-companies-s">COMPANIES</div>
+				<%= button_to	"New Event", new_location_event_path(@location), method: :get, class: "mdl-button mdl-js-button mdl-button--raised", id: "md-second" %>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="loc-events-s">LOC</div>
+				<% raise %>
+					Events go Here
 				</div>
 			</div>
 		</div>
