@@ -61,12 +61,12 @@ flat_c_11 = FlatContract.create!(flat: flat7,  tenant: tenant11, start_date: Fak
 puts "flat contracts created"
 
 
-event = Event.create!(user: user, name: Faker::Esport.event, description: Faker::Esport.game, capacity: 4, address: Faker::Address.full_address, date: Faker::Date.forward(10), location: location)
-event2 = Event.create!(user: user, name: Faker::Esport.event, description: Faker::Esport.game, capacity: 2, address: Faker::Address.full_address, date: Faker::Date.forward(5), location: location)
-event3 = Event.create!(user: user, name: Faker::Esport.event, description: Faker::Esport.game, capacity: 3, address: Faker::Address.full_address, date: Faker::Date.forward(2), location: location)
-event4 = Event.create!(user: user, name: Faker::Esport.event, description: Faker::Esport.game, capacity: 2, address: Faker::Address.full_address, date: Faker::Date.forward(7), location: location)
-event5 = Event.create!(user: user, name: Faker::Esport.event, description: Faker::Esport.game, capacity: 3, address: Faker::Address.full_address, date: Faker::Date.backward(10), location: location2)
-event6 = Event.create!(user: user, name: Faker::Esport.event, description: Faker::Esport.game, capacity: 2, address: Faker::Address.full_address, date: Faker::Date.backward(2), location: location2)
+event = Event.create!(user: user, name: "Bowling Social", description: Faker::Esport.game, capacity: 4, address: Faker::Address.full_address, date: Faker::Date.forward(10), location: location)
+event2 = Event.create!(user: user, name: "Dungeons and Dragons in the Common", description: Faker::Esport.game, capacity: 2, address: Faker::Address.full_address, date: Faker::Date.forward(5), location: location)
+event3 = Event.create!(user: user, name: "Hackathon", description: Faker::Esport.game, capacity: 3, address: Faker::Address.full_address, date: Faker::Date.forward(2), location: location)
+event4 = Event.create!(user: user, name: "Cocktail Mixer", description: Faker::Esport.game, capacity: 2, address: Faker::Address.full_address, date: Faker::Date.forward(7), location: location)
+event5 = Event.create!(user: user, name: "Steve's Birthday", description: Faker::Esport.game, capacity: 3, address: Faker::Address.full_address, date: Faker::Date.backward(10), location: location2)
+event6 = Event.create!(user: user, name: "LAN Party", description: Faker::Esport.game, capacity: 2, address: Faker::Address.full_address, date: Faker::Date.backward(2), location: location2)
 
 puts "events created"
 

@@ -10,7 +10,7 @@
 
 <div class="loc-s-wrapper container">
 	<div class="row">
-		<div class="col-md-8 loc-inside-wrapper">
+		<div class="col-md-6 loc-inside-wrapper">
 			<div class="row">
 				<% @location.flats.each do |flat| %>
 					<div class="col-sm-12" id="text-decoration">
@@ -50,16 +50,61 @@
 				<% end %>
 			</div>
 		</div>
-		<div class="col-md-4 loc-inside-wrapper">
+		<div class="col-md-6 loc-inside-wrapper">
 			<div class="row">
 				<div class="col-md-12">
 				<%= button_to	"New Event", new_location_event_path(@location), method: :get, class: "mdl-button mdl-js-button mdl-button--raised", id: "md-second" %>
+
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
-				<% raise %>
-					Events go Here
+				<div class="col-xs-12">
+					<div class="row events-wrapper">
+						<% @location.events.each do |event| %>
+						<div class="col-sm-6">
+							<div class="card-loc-s">
+								<div class="row">
+									<div class="col-xs-6">
+										<span><i class="fas fa-calendar-alt"></i></span><div class="event-day"><%= event.date.day %></div>
+									</div>
+									<div class="col-xs-6">
+										<div class="row">
+											<div class="col-xs-12 event-month">
+												<%= event.date.strftime('%b') %>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 event-hour">
+												<%= event.date.strftime('%H:%M') %>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="row">
+											<div class="col-xs-12 event-name">
+												<%= event.name %>
+											</div>
+											<div class="col-xs-12 event-des">
+												<%= event.description %>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row attendees-wrap">
+										<%event.event_bookings.each do |eb| %>
+									<div class="col-xs-3 ">
+										<img  class="avatar-bordered" src="https://randomuser.me/api/portraits/women/16.jpg" alt="Guests" />
+									</div>
+									<% end %>
+								</div>
+							</div>
+
+							
+						</div>
+						<% end %>
+					</div>
 				</div>
 			</div>
 		</div>
