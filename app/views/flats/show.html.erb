@@ -53,13 +53,15 @@
 					<div class="row">
 						
 					<% @flat.tenants.each do |tenant| %>
+
 					<div class="col-xs-12 col-sm-6 col-lg-4">
 						<div class="skill-card">
 							<header class="skill-card__header">
+					
 								<img class="skill-card__icon" src=<%= image_path "steve.jpg" %>/>
 							</header>
 							<section class="skill-card__body">
-								<h3 class="skill-card__title"><%= "#{tenant.first_name} #{tenant.last_name}" %></h2>
+								<h3 class="skill-card__title"><%= "#{tenant.first_name} #{tenant.last_name}" %></h3>
 								<span class="skill-card__duration">
 									<div><%= "Start: #{tenant.flat_contracts.first.start_date}" %></div>
 									<div><%= "End: #{tenant.flat_contracts.first.end_date}"%></div>
@@ -70,7 +72,7 @@
 									<li><i class="fas fa-mobile fa"></i>   <%= tenant.phone %></li>
 									<li><i class="fas fa-birthday-cake"></i>   <%= tenant.birthday %></li>
 								</ul>
-							</section>
+								</section>
 						</div>
 					</div>
 					<% end %>

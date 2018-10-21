@@ -3,19 +3,14 @@ class Flat < ApplicationRecord
   has_many :flat_contracts, dependent: :destroy
   has_many :tenants, through: :flat_contracts
   validates :flat_type, presence: true
-  validates :availability, inclusion: { in: [ true, false ] }
+  validates :availability, inclusion: { in: [true, false] }
   validates :address, presence: true
   validates :occupancy, presence: true
   validates :bedrooms, presence: true
-  validates :bathrooms, presence: true 
-  validates :flat_number, presence: true 
-
+  validates :bathrooms, presence: true
+  validates :flat_number, presence: true
 
   def available?
-  	availability =  tenants.count < occupancy 
+    availability = tenants.count < occupancy
   end
-
-  
-
-
 end

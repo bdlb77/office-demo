@@ -153,6 +153,7 @@ $pad-loc: 10px;
 // EVENTS
 
 .card-loc-s{
+  position: relative;
   color: $first;
   margin-top: 5px;
   box-shadow: 1px 1px 5px lightgray;
@@ -181,4 +182,9 @@ $pad-loc: 10px;
     overflow: scroll;
   }
 }
-
+.delete-event{
+  z-index: 2;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}

@@ -61,8 +61,11 @@
 				<div class="col-xs-12">
 					<div class="row events-wrapper">
 						<% @location.events.each do |event| %>
-						<div class="col-sm-6">
+						<div class=" col-md-6 col-sm-4 col-xs-12">
 							<div class="card-loc-s">
+						<%=link_to event_path(event), method: :delete, data: {confirm: "Are you sure?"} do %> 
+          		<i class="fas fa-trash-alt delete-event fa"></i>
+        			<% end %>
 								<div class="row">
 									<div class="col-xs-6">
 										<span><i class="fas fa-calendar-alt"></i></span><div class="event-day"><%= event.date.day %></div>
@@ -100,8 +103,6 @@
 									<% end %>
 								</div>
 							</div>
-
-							
 						</div>
 						<% end %>
 					</div>

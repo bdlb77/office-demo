@@ -1,4 +1,5 @@
 .card {
+  margin: 15px;
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
@@ -6,13 +7,7 @@
   color: white;
   position: relative;
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
+
 .card-category {
   position: absolute;
   top: 10px;

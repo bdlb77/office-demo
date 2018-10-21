@@ -29,13 +29,13 @@ Casecmp:
   Enabled: false
 CyclomaticComplexity:
   Enabled: false
-MethodMissing:
-  Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
 LineLength:
   Max: 120
-Style/EmptyMethod:
+Style/MethodMissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
   Enabled: false
 Bundler/OrderedGems:
   Enabled: false

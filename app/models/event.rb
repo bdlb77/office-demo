@@ -2,7 +2,7 @@ class Event < ApplicationRecord
   belongs_to :user
   belongs_to :location
   has_many :tenants, through: :event_bookings
-  has_many :event_bookings
+  has_many :event_bookings, dependent: :destroy
 
   validates :name, presence: true
   validates :date, presence: true
