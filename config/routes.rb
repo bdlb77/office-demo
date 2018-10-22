@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   	resources :flats, only: [:show, :new, :create, :edit, :update]
   end
   resources :events, only: [:destroy]
-  resources :tenants, only: [:show, :new, :create, :edit, :update]
+  resources :tenants
 end
